@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImagePreview" customModule="DemoPickImage" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="m3U-v0-b8K" id="NdO-fE-4jP"/>
+                <outlet property="previewImageView" destination="r9h-CJ-aRS" id="h2S-wm-Mns"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="m3U-v0-b8K">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r9h-CJ-aRS">
+                    <rect key="frame" x="0.0" y="44" width="414" height="728"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWi-CO-ONL">
+                    <rect key="frame" x="107" y="792" width="200" height="50"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="2oo-sE-G9c"/>
+                        <constraint firstAttribute="width" constant="200" id="aqC-zW-0sI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                    <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Done" image="tick_ic">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onDone:" destination="-1" eventType="touchUpInside" id="4g9-nJ-wFW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTN-GG-W6s">
+                    <rect key="frame" x="15" y="44" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="RT9-Fn-ERy"/>
+                    </constraints>
+                    <state key="normal" image="close_ic"/>
+                    <connections>
+                        <action selector="onClose:" destination="-1" eventType="touchUpInside" id="AhT-Za-p4V"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="RTN-GG-W6s" firstAttribute="width" secondItem="RTN-GG-W6s" secondAttribute="height" id="1Ug-qE-t8x"/>
+                <constraint firstItem="RTN-GG-W6s" firstAttribute="leading" secondItem="24d-nF-NZc" secondAttribute="leading" constant="15" id="C6w-7r-faL"/>
+                <constraint firstItem="r9h-CJ-aRS" firstAttribute="top" secondItem="24d-nF-NZc" secondAttribute="top" id="Th4-vb-ihl"/>
+                <constraint firstItem="VWi-CO-ONL" firstAttribute="top" secondItem="r9h-CJ-aRS" secondAttribute="bottom" constant="20" id="dMw-UI-lZw"/>
+                <constraint firstItem="24d-nF-NZc" firstAttribute="bottom" secondItem="VWi-CO-ONL" secondAttribute="bottom" constant="20" id="gx9-PJ-sFw"/>
+                <constraint firstItem="VWi-CO-ONL" firstAttribute="centerX" secondItem="m3U-v0-b8K" secondAttribute="centerX" id="kDP-vY-n7g"/>
+                <constraint firstItem="RTN-GG-W6s" firstAttribute="top" secondItem="24d-nF-NZc" secondAttribute="top" id="kM4-SK-Tv1"/>
+                <constraint firstItem="24d-nF-NZc" firstAttribute="trailing" secondItem="r9h-CJ-aRS" secondAttribute="trailing" id="m5x-vQ-7aF"/>
+                <constraint firstItem="r9h-CJ-aRS" firstAttribute="leading" secondItem="24d-nF-NZc" secondAttribute="leading" id="qNj-KL-OHg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="24d-nF-NZc"/>
+            <point key="canvasLocation" x="102.89855072463769" y="92.410714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close_ic" width="30" height="30"/>
+        <image name="tick_ic" width="30" height="30"/>
+    </resources>
+</document>
